@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Remove custom theme
 // @namespace    https://tjournal.ru
-// @version      1
+// @version      1.1
 // @description  Ded Pihto
 // @author       PP
 // @match        https://tjournal.ru/sex*
@@ -11,7 +11,10 @@
 
 (function() {
     'use strict';
-$("body").bind("DOMSubtreeModified", function() {
+    $(document).ready(function(){
         $("#custom_subsite_css").remove();
-});
+    });
+    $("body").bind("DOMSubtreeModified", function() {
+        $("#custom_subsite_css").remove();
+    });
 })();
